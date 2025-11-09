@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTOCOL Streetwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2em;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1602810319427-1c9f9c5f3c3e') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px #000;
+    }
+    .quote {
+      font-size: 1.2em;
+      margin: 20px auto;
+      text-align: center;
+      font-style: italic;
+      color: #ccc;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .category {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .category:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #0ff;
+    }
+    .category h2 {
+      margin-bottom: 10px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .footer {
+      background: #000;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>PROTOCOL</header>
+  <div class="hero">Silent but Fearless. Built From Chaos.</div>
+  <div class="quote" id="quoteBox">“Different = Power.”</div>
+
+  <section class="categories">
+    <div class="category">
+      <h2>Men</h2>
+      <p>T-Shirts, Hoodies, Joggers, Hats</p>
+    </div>
+    <div class="category">
+      <h2>Women</h2>
+      <p>Cropped Sweaters, Tees, Trackies</p>
+    </div>
+    <div class="category">
+      <h2>Kids</h2>
+      <p>Mini Hoodies, Tees, Beanies</p>
+    </div>
+    <div class="category">
+      <h2>Accessories</h2>
+      <p>Caps, Beanies, Socks</p>
+    </div>
+    <div class="category">
+      <h2>Featured Drop</h2>
+      <p>“Protocol: Survive” Hoodie<br>“Built From Chaos” Sweater</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 PROTOCOL. All rights reserved. | Designed for the rare type.
+  </div>
+
+  <script>
+    const quotes = [
+      "Different = Power.",
+      "Built From Chaos.",
+      "Silent but Fearless.",
+      "Protocol: Survive.",
+      "Unbreakable.",
+      "Outlier by Design."
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("quoteBox").textContent = `“${quotes[i]}”`;
+      i = (i + 1) % quotes.length;
+    }, 4000);
+  </script>
+</body>
+</html>
